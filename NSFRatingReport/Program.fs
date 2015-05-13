@@ -3,11 +3,11 @@ open System
 open FSharp.Data
 
 [<Literal>]
-let path = """c:\users\lepne_000\documents\visual studio 2013\Projects\NSFRatingReport\NSFRatingReport\NSF.txt"""
+let path = """C:\Users\lepne_000\Desktop\SjakkResCSV.csv"""
 
 type Spiller = {Navn:string; Rating: Nullable<int>; Poeng: decimal ; StartNr : int; Gruppe: string; Resultater: string option list; Plassering:int}
 type NSFReport = {Text:string; Aktivitet: string ; CombinedText:string}
-type ExcelReport = CsvProvider<path>
+type ExcelReport = CsvProvider<path,Encoding="ISO-8859-15">
 let ssk = ExcelReport.Load(path)
 
 let readInSpillere =    
