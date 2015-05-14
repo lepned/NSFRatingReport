@@ -2,6 +2,8 @@
 open System
 open FSharp.Data
 
+//EloRapport.fsx er kortere og mer konsis -> gjør det samme som under...
+
 [<Literal>]
 let path = """C:\Users\lepne_000\Desktop\SjakkResCSV.csv"""
 
